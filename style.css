@@ -1,0 +1,66 @@
+body {
+    background-color: #1B1B1B;
+    margin: 0;
+}
+
+#nav-panel {
+    margin: 0;
+    position: absolute;
+    background-color: #1B1B1B;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-right-width: 5%;
+    border-right-color: #515151;
+    border-right-style: solid;
+    z-index: 1;
+}
+
+#content-panel {
+    margin: 0;
+    border: none;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #1B1B1B;
+}
+
+.jetbrains-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+}
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    color: #C8C8C8;
+}
+
+#nav-title {
+    font-weight: 400;
+}
+
+.nav-link {
+    font-size: 28px;
+}
+
+
+/* <weight>: Use a value from 100 to 800
+ <uniquifier>: Use a unique and descriptive class name
+
+.jetbrains-mono-<uniquifier> {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+  .rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+}*/
