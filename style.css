@@ -41,10 +41,20 @@ body {
 
 #nav-title {
     font-weight: 400;
+    margin-left: 7%;
 }
 
 .nav-link {
     font-size: 28px;
+    margin: 0;
+    padding-left: 7%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+}
+
+.nav-link:hover {
+    background-color: #515151;
+    cursor: pointer;
 }
 
 
