@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+p {
+    width: fit-content;
+}
+
 .jetbrains-mono {
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
@@ -91,6 +95,15 @@ body {
     font-weight: 600;
     padding: 15px;
     margin-top: 3%;
+}
+
+.abt-img {
+    position: absolute;
+    width: 30%;
+    aspect-ratio: 3 / 4;
+    top: 0;
+    right: 10%;
+    overflow: hidden;
 }
 
 h1:hover {
