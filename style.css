@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #1B1B1B;
     margin: 0;
@@ -6,6 +10,10 @@ body {
 
 p {
     width: fit-content;
+}
+
+a {
+    text-decoration: none;
 }
 
 .jetbrains-mono {
@@ -65,6 +73,7 @@ p {
 }
 
 .nav-link {
+    width: auto;
     font-size: 28px;
     margin: 0;
     padding-left: 7%;
@@ -97,13 +106,36 @@ p {
     margin-top: 3%;
 }
 
-.abt-img {
+#abt-slides {
     position: absolute;
-    width: 30%;
-    aspect-ratio: 3 / 4;
-    top: 0;
+    top: 22%;
     right: 10%;
+    width: 30%;
+}
+
+#abt-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
+}
+
+#abt-img-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.abt-img-tab {
+    width: fit-content;
+    padding-left: 2%;
+    padding-right: 3%;
+    background-color: #3B3838;
+    border-left: 2px #515151 solid;
+    font-size: 14px;
+}
+
+#fth-tab {
+    background-color: #2b2929;
 }
 
 h1:hover {
@@ -112,12 +144,15 @@ h1:hover {
 
 .nav-link:hover {
     background-color: #383838;
-    cursor: pointer;
 }
 
 #intro-btn:hover {
     color: #33ff00;
     border-color: #33ff00;
+    cursor: pointer;
+}
+
+.abt-img-tab:hover {
     cursor: pointer;
 }
 

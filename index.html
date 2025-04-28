@@ -12,13 +12,14 @@
         <div id="nav-panel">
             <h1 class="rubik" id="nav-title">NAVIGATION</h1>
             <div>
-                <p class="rubik nav-link"><span style="color: #F05A5A"><i class="fa-solid fa-user"></i></span> &nbspabout_me</p>
-                <p class="rubik nav-link"><span style="color: #FF9D34"><i class="fa-solid fa-laptop-code"></i></span> &nbsppersonal_projects</p>
-                <p class="rubik nav-link"><span style="color: #874ED3"><i class="fa-solid fa-briefcase"></i></span> &nbspexperience</p>
-                <p class="rubik nav-link"><span style="color: #f1d740"><i class="fa-solid fa-graduation-cap"></i></span> &nbspeducation</p>
-                <p class="rubik nav-link"><span style="color: #54A4FB"><i class="fa-solid fa-file-lines"></i></span> &nbspresume</p>
-                <p class="rubik nav-link"><span style="color: #55d170"><i class="fa-solid fa-phone"></i></span> &nbspcontact</p>
+                <a href="#abt-panel"><p class="rubik nav-link"><span style="color: #F05A5A"><i class="fa-solid fa-user"></i></span> &nbspabout_me</p></a>
+                <a href=""><p class="rubik nav-link"><span style="color: #FF9D34"><i class="fa-solid fa-laptop-code"></i></span> &nbsppersonal_projects</p></a>
+                <a href=""><p class="rubik nav-link"><span style="color: #874ED3"><i class="fa-solid fa-briefcase"></i></span> &nbspexperience</p></a>
+                <a href=""><p class="rubik nav-link"><span style="color: #f1d740"><i class="fa-solid fa-graduation-cap"></i></span> &nbspeducation</p></a>
+                <a href=""><p class="rubik nav-link"><span style="color: #54A4FB"><i class="fa-solid fa-file-lines"></i></span> &nbspresume</p></a>
+                <a href=""><p class="rubik nav-link"><span style="color: #55d170"><i class="fa-solid fa-phone"></i></span> &nbspcontact</p></a>
             </div>
+            <a href="#intro-panel" style="position: fixed; left: 1%; bottom: 1%;"><p class="rubik">Back To Top</p></a>
         </div>
 
         <div id="content-panel">
@@ -30,7 +31,7 @@
                         </mask>
                         <image xlink:href="img/me.jpg" mask="url(#svgmask3)"></image>
                       </svg>
-                <button id="intro-btn" class="jetbrains-mono"><i class="fa-solid fa-play"></i> Run Introduction</button>
+                <a href="#abt-panel"><button id="intro-btn" class="jetbrains-mono"><i class="fa-solid fa-play"></i> Run Introduction</button></a>
             </div>
             <div class="section alt-section" id="abt-panel">
                 <h1 class="jetbrains-mono sect-head" style="color: #F05A5A;">About Me</h1>
@@ -41,9 +42,39 @@
                     <br>In my free time, I have a passion for<br> fashion and spend lots of time thrifting<br> and styling. I also play the guitar,<br> read, and go to the gym!
                 </p>
                 <div id="abt-slides">
-                    <img class="abt-img" src="img/grad.jpg">
+                    <div id="abt-img-nav">
+                        <div class="abt-img-tab jetbrains-mono" id="fth-tab" onclick="changeAbt('faith')"><p>faith.jpg</p></div>
+                        <div class="abt-img-tab jetbrains-mono" id="awd-tab" onclick="changeAbt('award')"><p>award.jpg</p></div>
+                        <div class="abt-img-tab jetbrains-mono" id="hck-tab" onclick="changeAbt('hack')"><p>hack.jpg</p></div>
+                        <div class="abt-img-tab jetbrains-mono" id="thft-tab" onclick="changeAbt('thrift')"><p>thrift.jpg</p></div>
+                    </div>
+                    <img id="abt-img" src="img/grad.jpg">
                 </div>
             </div>
         </div>
+
+
+        <script>
+            function changeAbt(clickedImg) {
+                if (clickedImg === 'faith') {
+                    document.getElementById('abt-img').src = 'img/grad.jpg';
+                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
+                    document.getElementById('fth-tab').style.backgroundColor = '#2b2929';
+                } else if (clickedImg === 'award') {
+                    document.getElementById('abt-img').src = 'img/award.jpg';
+                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
+                    document.getElementById('awd-tab').style.backgroundColor = '#2b2929';
+                } else if (clickedImg === 'hack') {
+                    document.getElementById('abt-img').src = 'img/hack.jpg';
+                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
+                    document.getElementById('hck-tab').style.backgroundColor = '#2b2929';
+                } else if (clickedImg === 'thrift') {
+                    document.getElementById('abt-img').src = 'img/thrift.jpg';
+                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
+                    document.getElementById('thft-tab').style.backgroundColor = '#2b2929';
+                }
+            }
+        </script>
+
     </body>
 </html>
