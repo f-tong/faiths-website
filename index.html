@@ -64,45 +64,45 @@
                     <div style="position: relative;">
                         <i class="fa-solid fa-chevron-left proj-arrow" style="left: 0;" onclick="projArrowClick('l')"></i>
                         <div id="proj-wnd-display">
-                            <div class="proj-window" id="all-projs-wnd">
+                            <div class="proj-window" id="proj1" style="background-color:lightgreen">
                                 <!-- flexbox, displaying each proj-->
                             </div>
-                            <div class="proj-window" id="hbt-wnd" style="display: none; background-color: lavender;">
+                            <div class="proj-window" id="proj2" style="display: none; background-color: lavender;">
 
                             </div>
-                            <div class="proj-window" id="bfz-wnd" style="display: none; background-color:coral;">
+                            <div class="proj-window" id="proj3" style="display: none; background-color:coral;">
 
                             </div>                            
-                            <div class="proj-window" id="md-wnd" style="display: none; background-color:paleturquoise;">
+                            <div class="proj-window" id="proj4" style="display: none; background-color:paleturquoise;">
 
                             </div>
-                            <div class="proj-window" id="grd-wnd" style="display: none; background-color:palegoldenrod;">
+                            <div class="proj-window" id="proj5" style="display: none; background-color:palegoldenrod;">
 
                             </div>                            
                         </div>
                         <i class="fa-solid fa-chevron-right proj-arrow" style="right: 0;" onclick="projArrowClick('r')"></i>
                     </div>
-                    <div class="proj-desc" id="intro-desc">
-                        <h1 class="jetbrains-mono proj-title">Faith's Projects</h1>
+                    <div class="proj-desc" id="desc1" data-link="http://github.com/f-tong">
+                        <h2 class="jetbrains-mono proj-title">Faith's Projects</h2>
                         <p class="jetbrains-mono">My personal projects are done in a variety of languages, including HTML/CSS/JavaScript, Java, and Python.</p>
                     </div>
-                    <div class="proj-desc" id="hbt-desc" style="display: none;">
-                        <h1 class="jetbrains-mono proj-title">Habit Tracker Website</h1>
+                    <div class="proj-desc" id="desc2" style="display: none;" data-link="https://github.com/f-tong/habit-tracker">
+                        <h2 class="jetbrains-mono proj-title">Habit Tracker Website</h2>
                         <p class="jetbrains-mono">Inspired by James Clear's book Atomic Habits, this website built in HTML/CSS/JavaScript allows users to enter habits they want to keep.</p>
                     </div>
-                    <div class="proj-desc" id="bfz-desc" style="display: none;">
-                        <h1 class="jetbrains-mono proj-title">Brain Freeze</h1>
+                    <div class="proj-desc" id="desc3" style="display: none;" data-link="https://github.com/f-tong/brainfreeze">
+                        <h2 class="jetbrains-mono proj-title">Brain Freeze</h2>
                         <p class="jetbrains-mono">Brain Freeze is an app that allows users to study with various active-recall techniques, including flashcards, blurting, and line memorization.
                             It uses --- to ---, with a Java Swing GUI.
                         </p>
                     </div>
-                    <div class="proj-desc" id="md-desc" style="display: none;">
-                        <h1 class="jetbrains-mono proj-title">Mood Tracker</h1>
+                    <div class="proj-desc" id="desc4" style="display: none;" data-link="https://github.com/f-tong/mood-tracker">
+                        <h2 class="jetbrains-mono proj-title">Mood Tracker</h2>
                         <p class="jetbrains-mono">The Mood Tracker app ---
                         </p>
                     </div>
-                    <div class="proj-desc" id="grd-desc" style="display: none;">
-                        <h1 class="jetbrains-mono proj-title">Grade Calculator</h1>
+                    <div class="proj-desc" id="desc5" style="display: none;" data-link="https://github.com/f-tong/grade-calculator">
+                        <h2 class="jetbrains-mono proj-title">Grade Calculator</h2>
                         <p class="jetbrains-mono">This Python grade calculator takes users' input grades, ---.
                         </p>
                     </div>
@@ -139,19 +139,35 @@
 
             function projArrowClick(dir) {
                 wnds = document.getElementsByClassName('proj-window');
-                curWnd = document.getElementById('all-projs-wnd');
+                curWnd = 1;
                 for (let i = 0; i < wnds.length; i++) {
-                    if (tabs[i].style.display !== 'none') {
-                        curWnd = tabs[i];
+                    if (wnds[i].style.display !== 'none') {
+                        curWnd = curWnd + i;
                         break;
                     }
                 }
-
-                if (dir === 'r') {
-                    // INSTEAD OF HARDCODING IDS, number wnd{#}, perform arithmetic, if num == wnds.length, switch to 1
+                wndStem = "proj";
+                descStem = "desc";
+                curWId = wndStem.concat(curWnd.toString());
+                curDId = descStem.concat(curWnd.toString());
+                document.getElementById(curWId).style.display = 'none';
+                document.getElementById(curDId).style.display = 'none';
+                if (dir === 'r' && curWnd == wnds.length) {
+                    curWnd = 1;
+                } else if (dir === 'r') {
+                    curWnd += 1;
+                } else if (dir === 'l' && curWnd == 1) {
+                    curWnd = wnds.length;
                 } else {
-
+                    curWnd -= 1;
                 }
+                curWId = wndStem.concat(curWnd.toString());
+                curDId = descStem.concat(curWnd.toString());
+                document.getElementById(curWId).style.display = 'block';
+                document.getElementById(curDId).style.display = 'block';
+                newLink = document.getElementById(curDId).dataset.link;
+                console.log(newLink);
+                document.getElementById('proj-link').href = newLink;
             }
         </script>
 

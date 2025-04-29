@@ -177,18 +177,20 @@ a {
 .proj-title {
     width: fit-content;
     margin: auto;
+    font-size: 32px;
     color: #FF9D34;
 }
 
 #proj-link {
-    position: relative;
+    position: absolute;
     width: fit-content;
-    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
+    font-size: 24px;
     font-weight: 600;
     text-decoration: underline;
     color: #FF9D34;
-    background-color: aliceblue;
 }
 
 h1:hover {
