@@ -13,7 +13,7 @@
             <h1 class="rubik" id="nav-title">NAVIGATION</h1>
             <div>
                 <a href="#abt-panel"><p class="rubik nav-link"><span style="color: #F05A5A"><i class="fa-solid fa-user"></i></span> &nbspabout_me</p></a>
-                <a href=""><p class="rubik nav-link"><span style="color: #FF9D34"><i class="fa-solid fa-laptop-code"></i></span> &nbsppersonal_projects</p></a>
+                <a href="#proj-panel"><p class="rubik nav-link"><span style="color: #FF9D34"><i class="fa-solid fa-laptop-code"></i></span> &nbsppersonal_projects</p></a>
                 <a href=""><p class="rubik nav-link"><span style="color: #874ED3"><i class="fa-solid fa-briefcase"></i></span> &nbspexperience</p></a>
                 <a href=""><p class="rubik nav-link"><span style="color: #f1d740"><i class="fa-solid fa-graduation-cap"></i></span> &nbspeducation</p></a>
                 <a href=""><p class="rubik nav-link"><span style="color: #54A4FB"><i class="fa-solid fa-file-lines"></i></span> &nbspresume</p></a>
@@ -23,22 +23,28 @@
         </div>
 
         <div id="content-panel">
+
             <div id="intro-panel" class="section">
-                    <h1 style="color: #A0CEFF; font-size: 36px; font-weight: 400;" class="jetbrains-mono"><span style="font-size: 54px;">Hi. I'm</span><br> <span style="font-size: 96px; font-weight: 600;">Faith Tong.</span><br>Computer Science +<br>Business Administration<br>Undergraduate Student</h1>
+                    <h1 style="color: #A0CEFF; font-size: 36px; font-weight: 400;" class="jetbrains-mono">
+                        <span style="font-size: 54px;">Hi. I'm</span><br> <span style="font-size: 96px; font-weight: 600;">Faith Tong.</span>
+                        <br>Computer Science +<br>Business Administration<br>Undergraduate Student
+                    </h1>
                     <svg id="intro-img" width="1000" height="575">
                         <mask id="svgmask3">
-                          <circle fill="#ffffff" cx="725" cy="325" r="25vh"></circle>-
+                          <circle fill="#ffffff" cx="725" cy="325" r="250"></circle>-
                         </mask>
                         <image xlink:href="img/me.jpg" mask="url(#svgmask3)"></image>
                       </svg>
                 <a href="#abt-panel"><button id="intro-btn" class="jetbrains-mono"><i class="fa-solid fa-play"></i> Run Introduction</button></a>
             </div>
+
             <div class="section alt-section" id="abt-panel">
                 <h1 class="jetbrains-mono sect-head" style="color: #F05A5A;">About Me</h1>
                 <p class="jetbrains-mono" style="font-size: 24px;">I like to say I'm a <i>logical mind</i> with an<br> <i>affinity for creativity.</i>
                     <br><br>My intrinsic motivation, organization,<br> and systematic approach to problems has<br> helped me consistently achieve academic<br> and extracurricular success.
                     But what<br> brings me a lot of joy is to get creative<br> and add my own spin to projects - and<br> then pursue them in a disciplined manner.<br>
-                    <br>I have work experience in administration<br> and marketing, and love to learn<br> technical skills through hackathons and<br> personal projects. <span style="color:#F05A5A;">Check It Out</span><br>
+                    <br>I have work experience in administration<br> and marketing, and love to learn<br> technical skills through hackathons and<br> personal projects.
+                    <a href="#proj-panel" style="color:#F05A5A; font-weight:600; text-decoration:underline;">Check It Out</a><br>
                     <br>In my free time, I have a passion for<br> fashion and spend lots of time thrifting<br> and styling. I also play the guitar,<br> read, and go to the gym!
                 </p>
                 <div id="abt-slides">
@@ -51,27 +57,100 @@
                     <img id="abt-img" src="img/grad.jpg">
                 </div>
             </div>
+
+            <div class="section" id="proj-panel">
+                <h1 class="jetbrains-mono sect-head" style="color: #FF9D34;">Personal Projects</h1>
+                <div id="proj-display">
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-chevron-left proj-arrow" style="left: 0;" onclick="projArrowClick('l')"></i>
+                        <div id="proj-wnd-display">
+                            <div class="proj-window" id="all-projs-wnd">
+                                <!-- flexbox, displaying each proj-->
+                            </div>
+                            <div class="proj-window" id="hbt-wnd" style="display: none; background-color: lavender;">
+
+                            </div>
+                            <div class="proj-window" id="bfz-wnd" style="display: none; background-color:coral;">
+
+                            </div>                            
+                            <div class="proj-window" id="md-wnd" style="display: none; background-color:paleturquoise;">
+
+                            </div>
+                            <div class="proj-window" id="grd-wnd" style="display: none; background-color:palegoldenrod;">
+
+                            </div>                            
+                        </div>
+                        <i class="fa-solid fa-chevron-right proj-arrow" style="right: 0;" onclick="projArrowClick('r')"></i>
+                    </div>
+                    <div class="proj-desc" id="intro-desc">
+                        <h1 class="jetbrains-mono proj-title">Faith's Projects</h1>
+                        <p class="jetbrains-mono">My personal projects are done in a variety of languages, including HTML/CSS/JavaScript, Java, and Python.</p>
+                    </div>
+                    <div class="proj-desc" id="hbt-desc" style="display: none;">
+                        <h1 class="jetbrains-mono proj-title">Habit Tracker Website</h1>
+                        <p class="jetbrains-mono">Inspired by James Clear's book Atomic Habits, this website built in HTML/CSS/JavaScript allows users to enter habits they want to keep.</p>
+                    </div>
+                    <div class="proj-desc" id="bfz-desc" style="display: none;">
+                        <h1 class="jetbrains-mono proj-title">Brain Freeze</h1>
+                        <p class="jetbrains-mono">Brain Freeze is an app that allows users to study with various active-recall techniques, including flashcards, blurting, and line memorization.
+                            It uses --- to ---, with a Java Swing GUI.
+                        </p>
+                    </div>
+                    <div class="proj-desc" id="md-desc" style="display: none;">
+                        <h1 class="jetbrains-mono proj-title">Mood Tracker</h1>
+                        <p class="jetbrains-mono">The Mood Tracker app ---
+                        </p>
+                    </div>
+                    <div class="proj-desc" id="grd-desc" style="display: none;">
+                        <h1 class="jetbrains-mono proj-title">Grade Calculator</h1>
+                        <p class="jetbrains-mono">This Python grade calculator takes users' input grades, ---.
+                        </p>
+                    </div>
+                    <a href="http://github.com/f-tong" class="jetbrains-mono" id="proj-link" target="_blank">Check It Out</a>
+                </div>
+            </div>
         </div>
 
 
         <script>
             function changeAbt(clickedImg) {
+                tabs = document.getElementsByClassName('abt-img-tab');
+                recolourTabs(tabs);
                 if (clickedImg === 'faith') {
                     document.getElementById('abt-img').src = 'img/grad.jpg';
-                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
-                    document.getElementById('fth-tab').style.backgroundColor = '#2b2929';
+                    document.getElementById('fth-tab').style.backgroundColor = '#322f2f';
                 } else if (clickedImg === 'award') {
                     document.getElementById('abt-img').src = 'img/award.jpg';
-                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
-                    document.getElementById('awd-tab').style.backgroundColor = '#2b2929';
+                    document.getElementById('awd-tab').style.backgroundColor = '#322f2f';
                 } else if (clickedImg === 'hack') {
                     document.getElementById('abt-img').src = 'img/hack.jpg';
-                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
-                    document.getElementById('hck-tab').style.backgroundColor = '#2b2929';
+                    document.getElementById('hck-tab').style.backgroundColor = '#322f2f';
                 } else if (clickedImg === 'thrift') {
                     document.getElementById('abt-img').src = 'img/thrift.jpg';
-                    document.getElementsByClassName('abt-img-tab').style.backgroundColor = '#3B3838';
-                    document.getElementById('thft-tab').style.backgroundColor = '#2b2929';
+                    document.getElementById('thft-tab').style.backgroundColor = '#322f2f';
+                }
+            }
+
+            function recolourTabs(tabs) {
+                for (let i = 0; i < tabs.length; i++) {
+                    tabs[i].style.backgroundColor = '#3b3838';
+                }
+            }
+
+            function projArrowClick(dir) {
+                wnds = document.getElementsByClassName('proj-window');
+                curWnd = document.getElementById('all-projs-wnd');
+                for (let i = 0; i < wnds.length; i++) {
+                    if (tabs[i].style.display !== 'none') {
+                        curWnd = tabs[i];
+                        break;
+                    }
+                }
+
+                if (dir === 'r') {
+                    // INSTEAD OF HARDCODING IDS, number wnd{#}, perform arithmetic, if num == wnds.length, switch to 1
+                } else {
+
                 }
             }
         </script>
