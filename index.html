@@ -14,10 +14,10 @@
             <div>
                 <a href="#abt-panel"><p class="rubik nav-link"><span style="color: #F05A5A"><i class="fa-solid fa-user"></i></span> &nbspabout_me</p></a>
                 <a href="#proj-panel"><p class="rubik nav-link"><span style="color: #FF9D34"><i class="fa-solid fa-laptop-code"></i></span> &nbsppersonal_projects</p></a>
-                <a href=""><p class="rubik nav-link"><span style="color: #874ED3"><i class="fa-solid fa-briefcase"></i></span> &nbspexperience</p></a>
-                <a href=""><p class="rubik nav-link"><span style="color: #f1d740"><i class="fa-solid fa-graduation-cap"></i></span> &nbspeducation</p></a>
-                <a href=""><p class="rubik nav-link"><span style="color: #54A4FB"><i class="fa-solid fa-file-lines"></i></span> &nbspresume</p></a>
-                <a href=""><p class="rubik nav-link"><span style="color: #55d170"><i class="fa-solid fa-phone"></i></span> &nbspcontact</p></a>
+                <a href="#exp-panel"><p class="rubik nav-link"><span style="color: #874ED3"><i class="fa-solid fa-briefcase"></i></span> &nbspexperience</p></a>
+                <a href="#edu-panel"><p class="rubik nav-link"><span style="color: #f1d740"><i class="fa-solid fa-graduation-cap"></i></span> &nbspeducation</p></a>
+                <a href="#res-panel"><p class="rubik nav-link"><span style="color: #54A4FB"><i class="fa-solid fa-file-lines"></i></span> &nbspresume</p></a>
+                <a href="#ct-panel"><p class="rubik nav-link"><span style="color: #55d170"><i class="fa-solid fa-phone"></i></span> &nbspcontact</p></a>
             </div>
             <a href="#intro-panel" style="position: fixed; left: 1%; bottom: 1%;"><p class="rubik">Back To Top</p></a>
         </div>
@@ -54,7 +54,7 @@
                         <div class="abt-img-tab jetbrains-mono" id="hck-tab" onclick="changeAbt('hack')"><p>hack.jpg</p></div>
                         <div class="abt-img-tab jetbrains-mono" id="thft-tab" onclick="changeAbt('thrift')"><p>thrift.jpg</p></div>
                     </div>
-                    <img id="abt-img" src="img/grad.jpg">
+                    <img id="abt-img" src="img/abt/grad.jpg">
                 </div>
             </div>
 
@@ -88,7 +88,8 @@
                     </div>
                     <div class="proj-desc" id="desc2" style="display: none;" data-link="https://github.com/f-tong/habit-tracker">
                         <h2 class="jetbrains-mono proj-title">Habit Tracker Website</h2>
-                        <p class="jetbrains-mono">Inspired by James Clear's book Atomic Habits, this website built in HTML/CSS/JavaScript allows users to enter habits they want to keep.</p>
+                        <p class="jetbrains-mono">This website built in HTML/CSS/JavaScript leverages form functionality, web storage, and jQuery so users
+                            can add, delete and check off the daily habits they are trying to build each month. It was inspired by James Clear's book Atomic Habits.</p>
                     </div>
                     <div class="proj-desc" id="desc3" style="display: none;" data-link="https://github.com/f-tong/brainfreeze">
                         <h2 class="jetbrains-mono proj-title">Brain Freeze</h2>
@@ -103,11 +104,25 @@
                     </div>
                     <div class="proj-desc" id="desc5" style="display: none;" data-link="https://github.com/f-tong/grade-calculator">
                         <h2 class="jetbrains-mono proj-title">Grade Calculator</h2>
-                        <p class="jetbrains-mono">This Python grade calculator takes users' input grades, ---.
+                        <p class="jetbrains-mono">This Python grade calculator takes users' input grades and stores the assessment name and grade in a list.
+                            It calculates a weighted average and can take grades in percentages, fractions, letters, or levels from 1 to 4. It can also display
+                            all input assessments and their corresponding grades.
                         </p>
                     </div>
                     <a href="http://github.com/f-tong" class="jetbrains-mono" id="proj-link" target="_blank">Check It Out</a>
                 </div>
+            </div>
+            <div class="section alt-section" id="exp-panel">
+                <h1 class="jetbrains-mono sect-head" style="color:#874ED3;">Experience</h1>
+            </div>
+            <div class="section" id="edu-panel">
+                <h1 class="jetbrains-mono sect-head" style="color:#f1d740;">Education</h1>
+            </div>
+            <div class="section alt-section" id="res-panel">
+                <h1 class="jetbrains-mono sect-head" style="color:#54A4FB">Resume</h1>
+            </div>
+            <div class="section" id="ct-panel">
+                <h1 class="jetbrains-mono sect-head" style="color:#55d170">Contact</h1>
             </div>
         </div>
 
@@ -117,16 +132,16 @@
                 tabs = document.getElementsByClassName('abt-img-tab');
                 recolourTabs(tabs);
                 if (clickedImg === 'faith') {
-                    document.getElementById('abt-img').src = 'img/grad.jpg';
+                    document.getElementById('abt-img').src = 'img/abt/grad.jpg';
                     document.getElementById('fth-tab').style.backgroundColor = '#322f2f';
                 } else if (clickedImg === 'award') {
-                    document.getElementById('abt-img').src = 'img/award.jpg';
+                    document.getElementById('abt-img').src = 'img/abt/award.jpg';
                     document.getElementById('awd-tab').style.backgroundColor = '#322f2f';
                 } else if (clickedImg === 'hack') {
-                    document.getElementById('abt-img').src = 'img/hack.jpg';
+                    document.getElementById('abt-img').src = 'img/abt/hack.jpg';
                     document.getElementById('hck-tab').style.backgroundColor = '#322f2f';
                 } else if (clickedImg === 'thrift') {
-                    document.getElementById('abt-img').src = 'img/thrift.jpg';
+                    document.getElementById('abt-img').src = 'img/abt/thrift.jpg';
                     document.getElementById('thft-tab').style.backgroundColor = '#322f2f';
                 }
             }
