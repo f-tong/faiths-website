@@ -64,19 +64,22 @@
                     <div style="position: relative;">
                         <i class="fa-solid fa-chevron-left proj-arrow" style="left: 0;" onclick="projArrowClick('l')"></i>
                         <div id="proj-wnd-display">
-                            <div class="proj-window" id="proj1" style="background-color:lightgreen">
-                                <!-- flexbox, displaying each proj-->
+                            <div class="proj-window" id="proj1">
+                                <div class="proj-menu-card"></div>
+                                <div class="proj-menu-card"></div>
+                                <div class="proj-menu-card"></div>
+                                <div class="proj-menu-card"></div>
                             </div>
-                            <div class="proj-window" id="proj2" style="display: none; background-color: lavender;">
+                            <div class="proj-window" id="proj2" style="display: none;">
 
                             </div>
-                            <div class="proj-window" id="proj3" style="display: none; background-color:coral;">
+                            <div class="proj-window" id="proj3" style="display: none;">
 
                             </div>                            
-                            <div class="proj-window" id="proj4" style="display: none; background-color:paleturquoise;">
+                            <div class="proj-window" id="proj4" style="display: none;">
 
                             </div>
-                            <div class="proj-window" id="proj5" style="display: none; background-color:palegoldenrod;">
+                            <div class="proj-window" id="proj5" style="display: none;">
 
                             </div>                            
                         </div>
@@ -113,7 +116,25 @@
                 </div>
             </div>
             <div class="section alt-section" id="exp-panel">
-                <h1 class="jetbrains-mono sect-head" style="color:#874ED3;">Experience</h1>
+                <h1 class="jetbrains-mono sect-head" style="color:#ac6efe;">Experience</h1>
+                <div class="timeline">
+                    <div class="tl-container tl-left">
+                      <div class="tl-img"></div>
+                      <div class="jetbrains-mono tl-content">
+                        <p class="tl-header">SOCIAL MEDIA MANAGER<br>Jan-Apr 2025</p>
+                        <p>Managed UWCCF Frosh Cell's Instagram and Facebook. Designed in Canva and Capcut.
+                            Targeted content for first year students, increasing engagement by up to 120%, reaching ~2k accounts per month.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="tl-container tl-right">
+                      <div class="tl-img"></div>
+                      <div class="jetbrains-mono tl-content">
+                        <p class="tl-header">FROSH CELL LEADER<br>Jan-Apr 2025</p>
+                        <p>Lorem ipsum..</p>
+                      </div>
+                    </div>
+                  </div>
             </div>
             <div class="section" id="edu-panel">
                 <h1 class="jetbrains-mono sect-head" style="color:#f1d740;">Education</h1>
@@ -178,10 +199,14 @@
                 }
                 curWId = wndStem.concat(curWnd.toString());
                 curDId = descStem.concat(curWnd.toString());
-                document.getElementById(curWId).style.display = 'block';
+                if (curWnd == 1) {
+                    projMenu = document.getElementById(curWId);
+                    projMenu.style.display = 'flex';
+                } else {
+                    document.getElementById(curWId).style.display = 'block';
+                }
                 document.getElementById(curDId).style.display = 'block';
                 newLink = document.getElementById(curDId).dataset.link;
-                console.log(newLink);
                 document.getElementById('proj-link').href = newLink;
             }
         </script>
