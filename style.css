@@ -185,6 +185,12 @@ a {
     width: 44%;
     height: 44%;
     background-color: coral;
+    overflow: hidden;
+}
+
+.proj-menu-img {
+    width: 100%;
+    height: 100%;
 }
 
 .proj-img {
@@ -297,6 +303,10 @@ a {
     color: #ac6efe;
     margin: 0;
     font-weight: 600;
+  }
+
+  .cont-icon {
+    color: #b4ffc4;
   }
 
 h1:hover {
