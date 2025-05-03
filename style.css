@@ -163,9 +163,13 @@ a {
 }
 
 .proj-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     background-color: #2C2C2C;
+    overflow: hidden;
 }
 
 #proj1 {
@@ -173,7 +177,7 @@ a {
     justify-content: space-evenly;
     flex-wrap: wrap;
     height: 94%;
-    padding-top: 4%;
+    padding-top: 2%;
     overflow-y: scroll;
 }
 
@@ -181,6 +185,11 @@ a {
     width: 44%;
     height: 44%;
     background-color: coral;
+}
+
+.proj-img {
+  width: 100%;
+  margin: auto;
 }
 
 .proj-desc {

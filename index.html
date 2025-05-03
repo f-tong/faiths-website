@@ -71,16 +71,16 @@
                                 <div class="proj-menu-card"></div>
                             </div>
                             <div class="proj-window" id="proj2" style="display: none;">
-
+                                <img class="proj-img" src="img/proj/habit.gif">
                             </div>
                             <div class="proj-window" id="proj3" style="display: none;">
-
+                                <img class="proj-img" src="img/proj/brainfrz.gif">
                             </div>                            
                             <div class="proj-window" id="proj4" style="display: none;">
-
+                                <img class="proj-img" src="img/proj/mood.gif">
                             </div>
                             <div class="proj-window" id="proj5" style="display: none;">
-
+                                <img class="proj-img" src="img/proj/grade.gif">
                             </div>                            
                         </div>
                         <i class="fa-solid fa-chevron-right proj-arrow" style="right: 0;" onclick="projArrowClick('r')"></i>
@@ -222,12 +222,7 @@
                 }
                 curWId = wndStem.concat(curWnd.toString());
                 curDId = descStem.concat(curWnd.toString());
-                if (curWnd == 1) {
-                    projMenu = document.getElementById(curWId);
-                    projMenu.style.display = 'flex';
-                } else {
-                    document.getElementById(curWId).style.display = 'block';
-                }
+                document.getElementById(curWId).style.display = 'flex';
                 document.getElementById(curDId).style.display = 'block';
                 newLink = document.getElementById(curDId).dataset.link;
                 document.getElementById('proj-link').href = newLink;
