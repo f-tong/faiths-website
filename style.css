@@ -209,6 +209,11 @@ a {
     color: #FF9D34;
 }
 
+#exp-nav {
+  font-size: 18px;
+  color: #989898;
+}
+
 .timeline {
     position: relative;
     margin-right: 10%;
