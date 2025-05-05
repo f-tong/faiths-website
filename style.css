@@ -285,10 +285,12 @@ a {
     left: -17px;
   }
   
-  .tl-img {
+  .tl-img-box {
     width: 35%;
-    aspect-ratio: 1;
-    background-color: lightgray;
+  }
+
+  .tl-img {
+    width: 100%;
   }
 
   .tl-content {
@@ -305,9 +307,22 @@ a {
     font-weight: 600;
   }
 
-  .cont-panel {
-    width: inherit;
-    background-color: coral;
+  .edu-sect {
+    margin-top: 3%;
+  }
+
+  .edu-sect > h3 {
+    font-weight: 400;
+  }
+
+  .edu-title {
+    color: #fff1a2;
+  }
+
+  #cont-panel {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10%;
   }
 
   .cont-box {
@@ -315,8 +330,7 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 25%;
-    background-color: darkgoldenrod;
+    width: 30%;
   }
 
   .cont-icon {
