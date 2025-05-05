@@ -305,8 +305,23 @@ a {
     font-weight: 600;
   }
 
+  .cont-panel {
+    width: inherit;
+    background-color: coral;
+  }
+
+  .cont-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    background-color: darkgoldenrod;
+  }
+
   .cont-icon {
     color: #b4ffc4;
+    font-size: 56px;
   }
 
 h1:hover {
