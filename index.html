@@ -131,10 +131,15 @@
             </div>
             <div class="section alt-section" id="exp-panel">
                 <h1 class="jetbrains-mono sect-head" style="color:#ac6efe;">Experience
-                    <span id="exp-nav"><span id="exp-work">&nbsp Work</span> <span id="exp-vol">&nbspVolunteer</span> <span id="exp-ext">&nbspExtracurricular</span></span>
+                    <span id="exp-nav">
+                        <span class="exp-filter" id="exp-all" onclick="expFilter('all')">&nbsp All</span>
+                        <span class="exp-filter" id="exp-work" onclick="expFilter('work')">&nbspWork</span>
+                        <span class="exp-filter" id="exp-vol" onclick="expFilter('vol')">&nbspVolunteer</span>
+                        <span class="exp-filter" id="exp-extr" onclick="expFilter('extr')">&nbspExtracurricular</span>
+                    </span>
                 </h1>
                 <div class="timeline">
-                    <div class="tl-container tl-left">
+                    <div class="tl-container tl-left tl-extr">
                       <div class="tl-img-box">
                         <img class="tl-img" src="img/exp/fc_ig.png">
                       </div>
@@ -145,7 +150,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="tl-container tl-right">
+                    <div class="tl-container tl-right tl-extr">
                       <div class="tl-img-box">
                         <img class="tl-img" src="img/exp/fcl.jpg">
                       </div>
@@ -156,7 +161,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="tl-container tl-left">
+                    <div class="tl-container tl-left tl-work">
                         <div class="tl-img-box">
                             <img class="tl-img" src="img/exp/mukti24.png">
                         </div>
@@ -168,7 +173,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="tl-container tl-right">
+                    <div class="tl-container tl-right tl-work">
                         <div class="tl-img-box">
                             <img class="tl-img" src="img/exp/mukti23.jpg">
                         </div>
@@ -179,7 +184,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="tl-container tl-left">
+                    <div class="tl-container tl-left tl-work">
                         <div class="tl-img-box">
                             <img class="tl-img" src="img/exp/mukti22.jpg">
                         </div>
@@ -218,7 +223,7 @@
             <div class="section alt-section" id="res-panel">
                 <h1 class="jetbrains-mono sect-head" style="color:#54A4FB">Resume</h1>
                 <object data="doc/Faith_Tong_Resume.pdf" type="application/pdf" width="70%" height="70%">
-                    <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+                    <p>Link to Resume: <a href="doc/Faith_Tong_Resume.pdf">Download Here</a></p>
                 </object>
             </div>
             <div class="section" id="ct-panel">
@@ -300,6 +305,47 @@
                 document.getElementById(curDId).style.display = 'block';
                 newLink = document.getElementById(curDId).dataset.link;
                 document.getElementById('proj-link').href = newLink;
+            }
+
+            function expFilter(filt) {
+                filters = document.getElementsByClassName('exp-filter');
+                tlEvents = document.getElementsByClassName('tl-container');
+                for (let i = 0; i < filters.length; i++) {
+                    filters[i].style.opacity = 0.5;
+                }
+                if (filt === 'all') {
+                    document.getElementById('exp-all').style.opacity = 1;
+                    for (let i = 0; i < tlEvents.length; i++) {
+                        tlEvents[i].style.opacity = 1;
+                    }
+                } else if (filt === 'work') {
+                    document.getElementById('exp-work').style.opacity = 1;
+                    for (let i = 0; i < tlEvents.length; i++) {
+                        if (tlEvents[i].classList.contains('tl-work')) {
+                            tlEvents[i].style.opacity = 1;
+                        } else {
+                            tlEvents[i].style.opacity = 0.5;
+                        }
+                    }
+                } else if (filt === 'vol') {
+                    document.getElementById('exp-vol').style.opacity = 1;
+                    for (let i = 0; i < tlEvents.length; i++) {
+                        if (tlEvents[i].classList.contains('tl-vol')) {
+                            tlEvents[i].style.opacity = 1;
+                        } else {
+                            tlEvents[i].style.opacity = 0.5;
+                        }
+                    }
+                } else if (filt === 'extr') {
+                    document.getElementById('exp-extr').style.opacity = 1;
+                    for (let i = 0; i < tlEvents.length; i++) {
+                        if (tlEvents[i].classList.contains('tl-extr')) {
+                            tlEvents[i].style.opacity = 1;
+                        } else {
+                            tlEvents[i].style.opacity = 0.5;
+                        }
+                    }
+                }
             }
         </script>
 
