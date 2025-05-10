@@ -85,6 +85,15 @@ a {
     font-size: 36px;
 }
 
+.typewrite {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid #A0CEFF;
+  width: 0;
+  white-space: nowrap;
+  animation: type 1s steps(11, end) forwards, blink 1s infinite;
+}
+
 #intro-panel {
     margin-top: 0%;
 }
@@ -226,7 +235,7 @@ a {
 
 #exp-nav {
   font-size: 18px;
-  color: #989898;
+  color: #d1d1d1;
 }
 
 .timeline {
@@ -362,6 +371,17 @@ h1:hover {
 
 .exp-filter:hover {
   cursor: pointer;
+}
+
+
+@keyframes type {
+  from { width: 0% }
+  to { width: 52% }
+}
+
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: #A0CEFF; }
 }
 
 /* <weight>: Use a value from 100 to 800
