@@ -68,13 +68,14 @@ a {
 }
 
 #nav-title {
+    font-size: 2.5vw;
     font-weight: 400;
     margin-left: 7%;
 }
 
 .nav-link {
     width: auto;
-    font-size: 28px;
+    font-size: 1.7vw;
     margin: 0;
     padding-left: 7%;
     padding-top: 3.5%;
@@ -82,7 +83,7 @@ a {
 }
 
 .sect-head {
-    font-size: 36px;
+    font-size: 2.15vw;
 }
 
 .typewrite {
@@ -128,15 +129,29 @@ a {
     margin-top: 3%;
 }
 
+#abt-wrap {
+  position: relative;
+  width: 80%;
+  height: 75%;
+}
+
+#abt-text {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 70%;
+    font-size: 1.4vw;
+}
+
 #abt-slides {
     position: absolute;
-    top: 22%;
-    right: 10%;
+    top: 10%;
+    right: 0%;
     width: 30%;
 }
 
 #abt-img {
-    width: 100%;
+    width: 21.5vw;
     aspect-ratio: 3 / 4;
     overflow: hidden;
 }
@@ -144,7 +159,7 @@ a {
 #abt-img-nav {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 21.5vw;
 }
 
 .abt-img-tab {
@@ -153,7 +168,7 @@ a {
     padding-right: 3%;
     background-color: #3b3838;
     border-left: 2px #515151 solid;
-    font-size: 14px;
+    font-size: 0.775vw;
 }
 
 #fth-tab {
@@ -345,6 +360,10 @@ a {
     display: flex;
     justify-content: space-evenly;
     margin-right: 10%;
+  }
+
+  #cont-panel h2 {
+    font-size: 1.4vw;
   }
 
   .cont-box {
